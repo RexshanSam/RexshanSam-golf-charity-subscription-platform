@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Header, Footer } from '@/app/components/layout'
 import { Button } from '@/app/components/ui/Button'
@@ -12,7 +12,6 @@ import { createClient } from '@/app/lib/supabase/client'
 import type { Charity } from '@/app/lib/supabase'
 
 export default function SignupPage() {
-  const router = useRouter()
   const searchParams = useSearchParams()
   const preselectedCharityId = searchParams.get('charity')
 
